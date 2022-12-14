@@ -70,6 +70,23 @@ ul{
 img{
   display: block;
 }
+
+.current-page{
+  position:relative;
+  display: inline-block;
+}
+
+.current-page::after{
+  content:" ";
+ position: absolute;
+width: 100%;
+height: 4px;
+display: block;
+top: calc(24px + 24px - 4px);
+
+background-color: var(--accent);
+border-radius: 2px;
+}
 /* ===========================================================/GENERAL======================================== */
 
 /* вторичный цвет фона #F4F4FD */
