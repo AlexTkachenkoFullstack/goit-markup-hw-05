@@ -20,15 +20,15 @@
 }
 
 body {
-  background-color: var(--primary-background-color);
-  color: var(--primary-text-color);
-
   font-family: var(--primary-font);
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
   letter-spacing: var(--primary-letter-spacing);
+
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
 }
-/* ================================================GENERAL================================================ */
+/* ============================================GENERAL================================================ */
 .list {
   list-style: none;
 }
@@ -39,16 +39,16 @@ body {
 
 .hidden {
   position: absolute;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 h1,
@@ -81,6 +81,7 @@ img{
 .current-page::after{
   content:" ";
  position: absolute;
+
 width: 100%;
 height: 4px;
 display: block;
@@ -89,7 +90,7 @@ top: calc(24px + 24px - 4px);
 background-color: var(--accent);
 border-radius: 2px;
 }
-/* ===========================================================/GENERAL======================================== */
+/* ==================================================/GENERAL======================================== */
 
 /* вторичный цвет фона #F4F4FD */
 
@@ -101,7 +102,7 @@ border-radius: 2px;
 /* цвет текста на страничках в портфолио #F4F4FD */
 /* белый #FFFFFF */
 
-/* ========================================================CONTAINER=============================================*/
+/* =================================================CONTAINER=============================================*/
 .container{
 width: 1158px;
 margin: 0 auto;
@@ -109,16 +110,16 @@ padding: 0 15px;
 /* background-color: green; */
 }
 
- /*========================================================/CONTAINER=========================================== */
+ /*=================================================/CONTAINER=========================================== */
 
- /* ========================================================SECTION============================================= */
+ /* ================================================SECTION============================================= */
 .section{
   padding-top:120px;
   padding-bottom:120px;
 }
- /* =======================================================/SECTION============================================= */
+ /* ================================================/SECTION============================================= */
 
- /* =====================================================HEADER================================================= */
+ /* =================================================HEADER================================================= */
  .header{
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
  }
@@ -130,11 +131,13 @@ padding: 0 15px;
   padding-bottom: 24px;
  }
 
-/* ======================================================/HEADER=============================================== */
+/* =================================================/HEADER=============================================== */
 
-/* ===========================================================HEADER, FOOTER  LOGO============================== */
+/* =================================================HEADER, FOOTER  LOGO============================== */
 
 .logo-web {
+  transition: color var(--main-transition);
+
 margin-right:77px;
 
   color: var(--accent);
@@ -144,8 +147,6 @@ margin-right:77px;
   line-height: 1.3;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
-  transition: color var(--main-transition);
 }
 
 .logo-web:hover,
@@ -154,10 +155,10 @@ margin-right:77px;
 }
 
 .logo-studio {
+  transition: color var(--main-transition);
+
   color: var(--title-text-color);
   font-family: 'Raleway', sans-serif;
-
-  transition: color var(--main-transition);
 }
 
 .logo-studio:hover,
@@ -166,20 +167,19 @@ margin-right:77px;
 }
 
 .studio-white {
+  transition: color var(--main-transition);
+
   color: var(--text-color-img-portfolio);
   font-family: 'Raleway', sans-serif;
-
-  transition: color var(--main-transition);
 }
 
 .studio-white:hover,
 .studio-white:focus {
   color: var(--text-color-img-portfolio);
-
 }
-/* =============================================================/HEADER, FOOTER  LOGO============================================ */
+/* =================================================/HEADER, FOOTER  LOGO============================================ */
 
-/*===========================================================SITE NAV============================================================ */
+/*==================================================SITE NAV============================================================ */
 .site-nav{
   display: flex;
   align-items: center;
@@ -190,12 +190,12 @@ margin-right:77px;
 }
 
 .site-nav .link {
+  transition: color var(--main-transition);
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
-
-  transition: color var(--main-transition);
 }
 
 .site-nav .link:hover,
@@ -209,11 +209,11 @@ margin-right:77px;
 }
 
 .site-address .link {
+  transition: color var(--main-transition);
+
   color: var(--primary-text-color);
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
-
-  transition: color var(--main-transition);
 }
 
 .site-address{
@@ -230,27 +230,26 @@ margin-right:77px;
 .site-address .link:hover {
   color: var(--accent);
 }
-/*=========================================================/SITE NAV====================================================== */
+/*===================================================/SITE NAV====================================================== */
 
 
-/* ========================================================INDEX HERO===================================================== */
+/* ==================================================INDEX HERO===================================================== */
 .hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:linear-gradient(
+    to right,
+    rgba(46, 47, 66, 0.7), 
+    rgba(46, 47, 66, 0.7)
+  ), url("../images/index-background.jpg");
+      
   padding-top: 192px;
   padding-bottom: 192px;
   height: 603px;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-
-    
-    background-image:linear-gradient(
-      to right,
-      rgba(46, 47, 66, 0.7), 
-      rgba(46, 47, 66, 0.7)
-    ), url("../images/index-background.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
@@ -258,17 +257,20 @@ margin-right:77px;
   margin-right:auto;
   max-width: 492px;
   margin-bottom: 48px;
-
-  color: var(--primary-background-color);
-
+  
   font-weight: var(--secondary-font-weight);
   font-size: 56px;
   line-height: 1.1;
   text-align: center;
+  color: var(--primary-background-color);
 }
 
 .hero-button {
-  display: block;
+  display: flex;
+  transition: background-color var(--main-transition), box-shadow var(--main-transition);
+  
+
+  align-items: center;
   padding-top: 16px;
   padding-right: 32px;
   padding-bottom: 16px;
@@ -285,12 +287,8 @@ margin-right:77px;
   font-weight: var(--secondary-font-weight);
   font-size: var(--primary-font-size);
   line-height: var(--secondary-line-height);
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
-
   cursor: pointer;
-  transition: background-color var(--main-transition), box-shadow var(--main-transition);
 }
 
 .hero-button:hover,
@@ -304,16 +302,17 @@ margin-right:77px;
 }
 
 .backdrop {
+  position: fixed;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity var(--main-transition), visibility var(--main-transition);
+
   top:0;
   left:0;
   width:100vw;
   height: 100vh;
-  background: rgba(46, 47, 66, 0.4);
-  position: fixed;
-  visibility: visible;
-  opacity: 1;
 
-  transition: opacity var(--main-transition), visibility var(--main-transition);
+  background: rgba(46, 47, 66, 0.4);
 }
 
 .backdrop.is-hidden {
@@ -324,38 +323,41 @@ margin-right:77px;
 
 .modal {
   position: absolute;
+  transform:  translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform var(--main-transition), opacity var(--main-transition);
+  
   top: 50%;
   left: 50%;
   width: 408px;
   height: 576px;
+  border-radius: 4px;
+
   background: #FCFCFC;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
-transform:  translate(-50%, -50%) scale(1);
-opacity: 1;
-transition: transform var(--main-transition), opacity var(--main-transition);
 }
 
 .backdrop.is-hidden .modal {
-  opacity: 0;
   transform:  translate(-50%, -50%) scale(0.5);
+  opacity: 0;
 }
 
 .modal-cross {
-  color: #000000;
-  width: 24px;
-  height: 24px;
+  position: absolute;
   display: flex;
   align-items: center;
-  justify-content: center;;
-  position: absolute;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
   top:24px;
   right: 24px;
   border-radius: 50%;
+
+  color: #000000;
   background-color: var(--button-filter-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: none;
-
   transition: box-shadow var(--main-transition);
 }
 
@@ -391,23 +393,22 @@ margin-right:24px;
 }
 
 .quality-icon{
+  display:flex;
+  margin-bottom: 8px;
+border-radius: 4px;
+align-items: center;
+justify-content: center;
+
   width: 100%;
   height: 112px;
 
   background-color: var(--team-background-color);
-
-  display:flex;
- margin-bottom: 8px;
-border-radius: 4px;
-align-items: center;
-justify-content: center;
 }
 
 .quality-name {
 margin-bottom: 8px;
 
   color: var(--title-text-color);
-
   font-weight: var(--secondary-font-weight);
   font-size: var(--secondary-font-size);
   line-height: var(--secondary-line-height);
@@ -443,7 +444,6 @@ margin-bottom: 8px;
 .service-title,
 .team-title {
   color: var(--title-text-color);
-
   font-weight: var(--secondary-font-weight);
   font-size: 36px;
   line-height: 1.1;
@@ -460,7 +460,6 @@ padding-bottom: 120px;
 
 .team-item {
   background-color: var(--primary-background-color);
-
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 border-radius: 0px 0px 4px 4px;
 }
@@ -471,13 +470,14 @@ border-radius: 0px 0px 4px 4px;
 }
 
 .team-name {
+  margin-bottom: 8px;
+
   font-weight: var(--secondary-font-weight);
   font-size: var(--secondary-font-size);
   line-height: var(--secondary-line-height);
   text-align: center;
-
-  margin-bottom: 8px;
 }
+
 .team-name + .team-job {
   text-align: center;
 }
@@ -485,7 +485,6 @@ border-radius: 0px 0px 4px 4px;
 .team-job{
   margin-bottom: 12px;
 }
-
 
 .list-social-media{
   display:flex;
@@ -496,18 +495,18 @@ border-radius: 0px 0px 4px 4px;
 
 .link-social-media{
   display: inline-flex;
+  transition: background-color var(--main-transition);
+
+  justify-content: center;
+  align-items: center;
   height: 40px;
   width: 40px;
   padding: 0;
   border: none;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
 
   color:var(--team-background-color);
   background-color: var(--accent);
-  
-  transition: background-color var(--main-transition);
 }
 
 .link-social-media:hover,
@@ -522,16 +521,15 @@ fill: currentColor;
 
 /* ======================================================INDEX CUSTOMERS==================================== */
 .title-customers{
+  margin-bottom: 72px;
+
   font-family: var(--primary-font);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-
     color: var(--title-text-color);
-
-    margin-bottom: 72px;
 }
 
 .customers-list{
@@ -545,16 +543,16 @@ fill: currentColor;
 
 .customers-link{
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: color var(--main-transition), border-color var(--main-transition);
+
   width: 168px;
   height: 88px;
 
   border: 1px solid #8E8F99;
   border-radius: 4px;
   color:#8E8F99;
-  justify-content: center;
-  align-items: center;
-
-  transition: color var(--main-transition), border-color var(--main-transition);
 }
 
 .customers-link:hover,
@@ -579,31 +577,28 @@ border-color: var(--accent);
 
 /* ===============================================PORTFOLIO BUTTON FILTER ============================== */
 .button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: background-color var(--main-transition), color var(--main-transition);
+
   background-color: var(--team-background-color);
   color: var(--accent);
   border-radius: 4px;
   border: none;
-
   font-family: var(--primary-font);
   font-style: normal;
   font-weight: 600;
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.04em;
-
   cursor: pointer;
-
-  transition: background-color var(--main-transition), color var(--main-transition);
 }
 
 .button:hover,
 .button:focus {
   color: var(--primary-background-color);
   background-color: var(--accent);
-
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -634,8 +629,8 @@ border-color: var(--accent);
 
 .portfolio-link{
   display: inline-block;
-  box-shadow: none;
 
+  box-shadow: none;
   transition: box-shadow var(--main-transition);
 }
 
@@ -650,15 +645,17 @@ overflow: hidden;
 }
 
 .portfolio-overlay {
+  position: absolute;
+  transform: translateY(100%);
+  transition: transform var(--main-transition);
+  top: 0;
+  left: 0;
+
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
   width: 100%;
   height: 100%;
-position: absolute;
-top: 0;
-left: 0;
-padding-top: 40px;
-padding-left: 32px;
-padding-right: 32px;
-transform: translateY(100%);
 
 font-family: var(--primary-font);
 font-size: var(--primary-font-size);
@@ -666,8 +663,6 @@ line-height: var(--primary-line-height);
 letter-spacing: var(--primary-letter-spacing);
 color: var(--text-color-img-portfolio);
 background-color: var(--accent);
-
-transition: transform var(--main-transition);
 }
 
 .portfolio-link:hover .portfolio-overlay{
@@ -688,7 +683,6 @@ transition: transform var(--main-transition);
   margin-bottom: 8px;
 
   color: var(--title-text-color);
-
   font-weight: var(--secondary-font-weight);
   font-size: var(--secondary-font-size);
   line-height: var(--secondary-line-height);
@@ -702,10 +696,10 @@ transition: transform var(--main-transition);
 
 /* ============================================================F00TER================================================= */
 .footer {
-  background-color: var(--title-text-color);
-
   padding-top: 100px;
   padding-bottom: 100px;
+
+  background-color: var(--title-text-color);
 }
 
 .container-footer{
@@ -725,15 +719,14 @@ margin-right: 120px;
 
 
 .footer-title-link {
+  margin-bottom: 16px;
+
 font-family: var(--primary-font);
   font-weight: 600;
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
   letter-spacing: var(--primary-letter-spacing);
-
   color: var(--primary-background-color);
-
-  margin-bottom: 16px;
 }
 
 .footer .list-social-media{
@@ -742,14 +735,15 @@ font-family: var(--primary-font);
 }
 
 .footer .link-social-media { 
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 
-  background-color:rgba(255, 255, 255, 0.1);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 
+  background-color:rgba(255, 255, 255, 0.1);
   transition: background-color var(--main-transition);
 }
 
